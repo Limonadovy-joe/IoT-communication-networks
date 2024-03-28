@@ -4,8 +4,13 @@
   - [Cellular networks](#cellular-networks)
     - [Advantages of cellular IoT](#advantages-of-cellular-iot)
     - [Types of networks cellular](#types-of-networks-cellular)
+    - [Narrowband IoT](#narrowband-iot) 
+    - [Long term evolution](#long-term-evolution)
+    - [Devices overview](#devices-overview)
+  - [LAN - PAN networks](#lan-pan-networks)
+  - [LPWANs](#lpwans)
     - [Narrowband IoT](#narrowband-iot)
-    - [Long term evolution](#long-term-evolution) 
+    - [LoRaWAN](#lorawan)
 
 
 ## Types of IoT Networks
@@ -42,7 +47,7 @@
 - APN stands for **Access Point Name.** It's a configuration setting used by cellular networks to connect a mobile device to a **specific gateway between the carrier's network and the internet or another external network**
 - Narrowband-IoT takes advantage of **gaps in the radio frequency spectrum** to provide more efficient connectivity and **prevent interference**. These unused frequency bands are known as **“guard bands.”**
 - While **cellular networks like 4G LTE use broadband connections** (which support a wide range of radio frequencies), narrowband connections isolate devices to “narrower” ranges.
-- Narrowband-IoT introduces two major power-saving features: **power saving mode (PSM) and discontinuous reception (DRX)**. PSM essentially puts the device to sleep when not in use, and **DRX can extend the period that the device isn’t “actively listening” for a signal.**
+- Narrowband-IoT introduces two major power-saving features: **power saving mode (PSM) and discontinuous reception (DRX)**. PSM essentially puts the device to sleep when not in use, and **DRX can extend the period that the device isn’t “actively listening” for a signal.**  
 
 #### Long term evolution
 - Long term evolution **(LTE-M)**
@@ -50,12 +55,36 @@
 -  It lets IoT devices connect to 4G networks, **giving them more bandwidth and mobility than NB-IoT**, as well as access to voice over long term evolution **(VoLTE)** — a more advanced voice service.
 - Despite the greater power usage, LTE-M can still leverage PSM and DRX to significantly extend a device’s battery life
 - When a device needs to transmit or receive a larger volume of data, **LTE-M uses less power than NB-IoT because the higher bandwidth allows it to upload and download data significantly faster.**
-- 
 
+
+
+#### Devices overview
+- microcontrollers with integrated nb-iot modul
+  - LilyGO TTGO T-SIM7000G ESP32-WROVER-B 18560 Solar
+    - [Product](https://pt.aliexpress.com/item/4000542688096.html)
+    - [Datasheet](https://github.com/Xinyuan-LilyGO/LilyGO-T-SIM7000G)
+  - **IN DEVELOPMENT PHASE**: Walter: A certified ESP32-S3 module with LTE-M, NB-IoT, and GNSS for prototyping and production
+    - [Product](https://www.crowdsupply.com/dptechnics/walter#products)
   
+### LAN - PAN networks
+- such as Bluetooth and Wi-Fi provide high bandwidth but have limited coverage and scalability issues.
 
+### LPWANs
+#### LoRaWAN
+-  **LoRa** is a physical proprietary radio communication technique.
+-  **LoRaWAN** (wide area network) defines the communication protocol and system architecture.
+- LoRa uses license-free sub-gigahertz radio frequency bands EU868 in EU
+- **The technology covers the physical layer**, while other technologies and protocols such as **LoRaWAN (long range wide area network) cover the upper layers: Data Link(MAC), Network(IPv4, IPv6), Transport(TCP, UDP), Session(RPC), Presentation(TLS,SSL), Application(HTTPS, DNS, DHCP, SSH)** 
+- LoRa devices have **geolocation capabilities** used for trilaterating positions of devices via timestamps from gateways.
+- Data transmitted by an end-node device is received by **multiple gateways: Ethernet, Cellular, WiFi**, which forward the data packets to a centralized network server - LoRaWAN cloud. Data is then forwarded to **application servers.**
+- **The Network Server is in charge of the management of LORAWAN Gateways (antennas – “Radio Access Network”)**, the authorization of the sensors and the exchange of data (uplink, downlink) between the sensors and the applications.
+- SigFox, the number one alternative to LORAWAN.
+- Unlike other LPWANs like Sigfox or NB-IoT, LoRaWAN is more free.
+- If you are not within **range of any gateway**, you can simply set up your own. But then the question arises - where to go with her? You can use an existing network (for example TTN community network or perhaps commercial Loriot), connect the gateway to it via the Internet and don't worry about it anymore. Or if you already have your own gateway, why not set up your own private network?
+- **private network**: Whether it's problems with internet connectivity (it doesn't even have to be unavailability, but for example company policies). **Sensitive data that must not leave the infrastructure.** Mistrust of the cloud solution.
        
 
 # Notes
-- **machine-to-machine** -
+- **machine-to-machine** -  is direct communication between devices using any communications channel. Such communication was originally accomplished **by having a remote network of machines relay information back to a central hub - (Star, Network, Tree Topology - Coordinator, Full functional device - FFD, Reduced functional device - RFD) for analysis**, which would then be rerouted into a system like a personal computer, network.
+   
 - **transceiver** -  is an electronic device which is a combination of a radio **transmitter and a receiver**, hence the name. It can both transmit and receive radio waves using an antenna, for communication purposes. These two related functions are often combined in a single device to reduce manufacturing costs. 
