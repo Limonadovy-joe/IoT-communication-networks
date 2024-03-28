@@ -4,7 +4,8 @@
   - [Cellular networks](#cellular-networks)
     - [Advantages of cellular IoT](#advantages-of-cellular-iot)
     - [Types of networks cellular](#types-of-networks-cellular)
-    - [Narrowband IoT](#narrowband-iot) 
+    - [Narrowband IoT](#narrowband-iot)
+    - [Long term evolution](#long-term-evolution) 
 
 
 ## Types of IoT Networks
@@ -37,7 +38,19 @@
   - There are two main types of LPWANs: **NB-IoT and LTE-M.**
 
 #### Narrowband IoT
+- NB-IoT
+- APN stands for **Access Point Name.** It's a configuration setting used by cellular networks to connect a mobile device to a **specific gateway between the carrier's network and the internet or another external network**
+- Narrowband-IoT takes advantage of **gaps in the radio frequency spectrum** to provide more efficient connectivity and **prevent interference**. These unused frequency bands are known as **“guard bands.”**
+- While **cellular networks like 4G LTE use broadband connections** (which support a wide range of radio frequencies), narrowband connections isolate devices to “narrower” ranges.
+- Narrowband-IoT introduces two major power-saving features: **power saving mode (PSM) and discontinuous reception (DRX)**. PSM essentially puts the device to sleep when not in use, and **DRX can extend the period that the device isn’t “actively listening” for a signal.**
 
+#### Long term evolution
+- Long term evolution **(LTE-M)**
+-  Is an offshoot of LTE technology specifically designed for the Internet of Things.
+-  It lets IoT devices connect to 4G networks, **giving them more bandwidth and mobility than NB-IoT**, as well as access to voice over long term evolution **(VoLTE)** — a more advanced voice service.
+- Despite the greater power usage, LTE-M can still leverage PSM and DRX to significantly extend a device’s battery life
+- When a device needs to transmit or receive a larger volume of data, **LTE-M uses less power than NB-IoT because the higher bandwidth allows it to upload and download data significantly faster.**
+- 
 
   
 
