@@ -11,6 +11,11 @@
   - [LPWANs](#lpwans)
     - [Narrowband IoT](#narrowband-iot)
     - [LoRaWAN](#lorawan)
+  - [Mesh network](#mesh-network)
+    - [Zigbee](#zigbee)
+    - [ZWawe](#zwawe)
+    - [RFID](#rfid)
+- [Notes](#notes)   
 
 
 ## Types of IoT Networks
@@ -44,7 +49,7 @@
 
 #### Narrowband IoT
 - NB-IoT
-- APN stands for **Access Point Name.** It's a configuration setting used by cellular networks to connect a mobile device to a **specific gateway between the carrier's network and the internet or another external network**
+- APN stands for **Access Point Name.** It's a configuration setting used by cellular networks to connect a mobile device to a **specific gateway <sup>[3](#notes)</sup> between the carrier's network and the internet or another external network**
 - Narrowband-IoT takes advantage of **gaps in the radio frequency spectrum** to provide more efficient connectivity and **prevent interference**. These unused frequency bands are known as **“guard bands.”**
 - While **cellular networks like 4G LTE use broadband connections** (which support a wide range of radio frequencies), narrowband connections isolate devices to “narrower” ranges.
 - Narrowband-IoT introduces two major power-saving features: **power saving mode (PSM) and discontinuous reception (DRX)**. PSM essentially puts the device to sleep when not in use, and **DRX can extend the period that the device isn’t “actively listening” for a signal.**  
@@ -82,9 +87,34 @@
 - Unlike other LPWANs like Sigfox or NB-IoT, LoRaWAN is more free.
 - If you are not within **range of any gateway**, you can simply set up your own. But then the question arises - where to go with her? You can use an existing network (for example TTN community network or perhaps commercial Loriot), connect the gateway to it via the Internet and don't worry about it anymore. Or if you already have your own gateway, why not set up your own private network?
 - **private network**: Whether it's problems with internet connectivity (it doesn't even have to be unavailability, but for example company policies). **Sensitive data that must not leave the infrastructure.** Mistrust of the cloud solution.
-       
+
+### Mesh network
+#### Zigbee
+- **Open Standard**
+- is wireless communication technology used to create **personal area networks - PAN**
+- The technology defined by the Zigbee specification is intended to be simpler and less expensive than other **wireless personal area networks** (WPANs), such as **Bluetooth or more general wireless networking such as Wi-Fi (or Li-Fi)**.
+- Its low power consumption limits transmission distances to **10–100 meters**
+- The Zigbee network layer natively supports both **star and tree networks**, and generic mesh networking. **Every network must have one coordinator device.** Within star networks, **the coordinator must be the central node.** Both **trees and meshes allow the use of Zigbee routers to extend communication at the network level.**
+
+
+#### ZWawe
+- **Proprietary Standard**. This can affect factors like **device interoperability**, **ecosystem fragmentation**, **and licensing costs**. 
+- is a wireless communications protocol used primarily for **residential and commercial building automation.**
+- It is a **mesh network using low-energy radio waves to communicate from device to device**
+- **Physical range	100-800 meters**
+- **WPANs**
+
+
+#### RFID
+- is the next generation of identifiers designed (not only) to identify goods, following on from the barcode system.
+- **Like barcodes, they are used for short-distance contactless communication.** The initiator of the development, as with barcodes, is **Wal-Mart.**
+- **RFID technology is used and improved by the newer NFC system, expanding their possibilities and use**
+
 
 # Notes
 - **machine-to-machine** -  is direct communication between devices using any communications channel. Such communication was originally accomplished **by having a remote network of machines relay information back to a central hub - (Star, Network, Tree Topology - Coordinator, Full functional device - FFD, Reduced functional device - RFD) for analysis**, which would then be rerouted into a system like a personal computer, network.
    
 - **transceiver** -  is an electronic device which is a combination of a radio **transmitter and a receiver**, hence the name. It can both transmit and receive radio waves using an antenna, for communication purposes. These two related functions are often combined in a single device to reduce manufacturing costs. 
+
+- **Gateway** - active device (network node) that has the **highest position in the computer network.** **The gateway connects two networks working with different communication protocols.** **It also performs the function of a router**, which is why we place it above the router in the sequence of network devices. The designation **default gateway indicates the router** through which the stations reach the external network ussualy to the internet.
+
