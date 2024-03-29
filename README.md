@@ -118,3 +118,8 @@
 
 - **Gateway** - active device (network node) that has the **highest position in the computer network.** **The gateway connects two networks working with different communication protocols.** **It also performs the function of a router**, which is why we place it above the router in the sequence of network devices. The designation **default gateway indicates the router** through which the stations reach the external network ussualy to the internet.
 
+- **mesh topology, network** -  síťová topologie, **obecný graf**, mesh topologie. Is a **local area network - LAN**  topology in which the **infrastructure nodes (i.e. bridges, switches, and other infrastructure devices) connect directly, dynamically and non-hierarchically to as many other nodes as possible** and cooperate with one another to efficiently route data to and from clients. Mesh topology provides **link redundancy**, so communication is possible even if **some lines or nodes fail.** There is no central element whose failure would disable the entire network. If a link fails to a node that has multiple connections, the node can still be communicated with. **In the network, it is necessary to use methods that select a suitable network path (routing), are able to change the path when some links fail (dynamic routing), prevent multiple data reception and looping.**
+
+- **Asset tracking** - refers to the method of tracking physical assets, either by scanning barcode labels attached to the assets or by using tags using **GPS, BLE, LoRa, or RFID which broadcast their location.** 
+
+   
